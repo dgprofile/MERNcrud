@@ -12,7 +12,7 @@ require("./db")
 
 app.use(express.json())
 
-app.use("/user", UserRouter)
+app.use("/user", UserRouter) //To register and login
 app.use("/userList", AuthAdminMiddleware, UserListRouter) //For admin users -> User List - GET/POST/PUT/DELETE
 app.use("/productList", AuthAdminMiddleware, ProductListRouter) //For admin users -> Product List - GET/POST/PUT/DELETE
 app.use("/shoppingList", AuthAdminMiddleware, ShoppingListRouter) //For admin users -> Orders List - GET/POST/PUT/DELETE
